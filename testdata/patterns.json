@@ -331,5 +331,22 @@
          "vllm/v1/worker/^cpu": true,
          "vllm/v1/worker/cpu": false
       }
+   },
+   {
+      "name": "paths with leading dot-slash",
+      "pattern": "/foo/",
+      "paths": {
+         "./foo/bar": true,
+         "./bar/foo/baz": false
+      }
+   },
+   {
+      "name": "unanchored pattern with leading dot-slash path",
+      "pattern": "*.txt",
+      "paths": {
+         "./foo.txt": true,
+         "./foo/bar.txt": true,
+         "./foo.go": false
+      }
    }
 ]
