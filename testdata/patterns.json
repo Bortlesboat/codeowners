@@ -341,12 +341,11 @@
       }
    },
    {
-      "name": "unanchored pattern with leading dot-slash path",
-      "pattern": "*.txt",
+      "name": "anchored wildcard pattern with leading dot-slash path",
+      "pattern": "/src/*.go",
       "paths": {
-         "./foo.txt": true,
-         "./foo/bar.txt": true,
-         "./foo.go": false
+         "./src/a.go": true,
+         "./lib/src/a.go": false
       }
    }
 ]
